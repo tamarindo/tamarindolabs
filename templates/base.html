@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{{ PROJECT_NAME }}, {{ PROJECT_DESCRIPTION }}">
+        <meta name="tamarindolabs" content="">
+        <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico">
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+        <link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="{{ STATIC_URL }}css/slide.css" rel="stylesheet">
+        <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
+        {% block style %}
+        {% endblock %}
+    </head>
+    <body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Inicio</a></li>
+              <li><a href="#about">Portafolio</a></li>
+            </ul>
+          </div>
+          <!--/.nav-collapse 1 -->
+          <a class="tamLogo" href="#">
+            <img src="{{STATIC_URL}}img/navlogo.gif" alt="Tamarindo Labs" title="Inicio Tamarindo Labs" />
+          </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="#"><a href="#">Servicios</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>  
+        </div>
+      </div>
+    <!-- principal content -->
+    </nav>
+
+            <div class="wrapper" >
+                {% block content %}
+                {% endblock %}
+            </div>
+
+    <!-- footer -->
+    <footer>
+        <figure class="footer-box">
+          <a href="mailto:hi@tamarindolabs.com" alt="Correo a Tamarindo Labs" tittle="Enviar un correo a Tamarindo Labs">
+            <img src="{{STATIC_URL}}img/logo.jpg" alt="Tamarindo Labs" class="footer-logo"/>
+          </a>
+        </figure>
+        <figure class="paper">
+            <img src="{{STATIC_URL}}img/paper-shadow.png" alt="Contactenos" class="paper-shadow"/>
+            <a href="#" alt="Contactanos" tittle="Contactanos">
+              <img src="{{STATIC_URL}}img/footer-contact.png" alt="Contactenos" class="footer-contact"/>
+            </a>
+        </figure>
+    </footer>
+
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/sequence.jquery.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-collapse.js"></script>
+    <script type="text/javascript"> 
+     $(document).ready(function(){
+       var options = {
+         autoPlay: false,
+         nextButton: ".next",
+         prevButton: ".prev"
+       };
+      var sequence = $("#sequence").sequence(options).data("sequence");
+     })
+   </script>
+        {% block js %}
+        {% endblock %}
+    </body>
+</html>

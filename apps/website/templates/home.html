@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans 'Inicio' %}{% endblock %}
+{% block content %}
+  <section class="container">
+      <h1>Materializamos lo que tu <strong>imaginas,</strong><br><span>en la web</span><br>
+        <div class="h1hidden">Diseño Web, Aplicaciones Web y Móviles. Pereira, Armenia, Cali, Medellin, Bogotá, Colombia</div>
+      </h1>
+    </section>
+
+    <section id="slide">
+      <div id="sequence">
+        <img class="prev" src="{{STATIC_URL}}img/bt-prev.png" alt="Previous" />
+        <img class="next" src="{{STATIC_URL}}img/bt-next.png" alt="Next" />
+        <ul>
+          <li>
+            <div class="info animate-in">
+              <h2>Built using Sequence.js</h2>
+              <p>The jQuery Slider Plugin with Infinite Style</p>
+            </div>
+            <img class="sky animate-in" src="{{STATIC_URL}}img/bg-clouds.png" alt="Blue Sky" />
+            <img class="balloon animate-in" src="{{STATIC_URL}}img/balloon.png" alt="Balloon" />
+          </li>
+          <li>
+            <div class="info">
+              <h2>Creative Control</h2>
+              <p>Create unique sliders using CSS3 transitions -- no jQuery knowledge required!</p>
+            </div>
+            <img class="sky" src="{{STATIC_URL}}img/bg-clouds.png" alt="Blue Sky" />
+            <img class="aeroplane" src="{{STATIC_URL}}img/aeroplane.png" alt="Aeroplane" />
+          </li>
+          <li>
+            <div class="info">
+              <h2>Cutting Edge</h2>
+              <p>Supports modern browsers, old browsers (IE7+), touch devices and responsive designs</p>
+            </div>
+            <img class="sky" src="{{STATIC_URL}}img/bg-clouds.png" alt="Blue Sky" />
+            <img class="kite" src="{{STATIC_URL}}img/kite.png" alt="Kite" />
+          </li>
+        </ul>
+      </div>
+  </section>
+
+  <div class="slide_bright">
+    <hr />
+  </div>
+
+  <section class="container">
+    <!--       ROW 1               -->
+    <div class="row-fluid show-grid">      
+      <div class="span4">
+        <div class="info-box">
+          <div class="info-box-header">
+            <h2><img src="{{STATIC_URL}}img/void.gif" class="icons icon-cloud" />Páginas Web</h2>
+          </div>
+          <div class="info-box-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Mauris vestibulum orci sit amet arcu feugiat at lacinia purus accumsan. 
+              Etiam non magna eget mauris consequat interdum.<br /><br />
+              Maecenas ac vestibulum erat. Fusce eget elit et turpis laoreet tristique sit amet sit amet libero
+            </p>
+            <a class="btn btn-primary" href="">Conocer más</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="span4">
+        <div class="info-box">
+          <div class="info-box-header">
+            <h2><img src="{{STATIC_URL}}img/void.gif" class="icons icon-engine" />Aplicaciones Web</h2>
+          </div>
+          <div class="info-box-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Mauris vestibulum orci sit amet arcu feugiat at lacinia purus accumsan. 
+              Etiam non magna eget mauris consequat interdum.<br /><br />
+              Maecenas ac vestibulum erat. Fusce eget elit et turpis laoreet tristique sit amet sit amet libero
+            </p>
+            <a class="btn btn-primary" href="">Conocer más</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="span4">
+        <div class="info-box">
+          <div class="info-box-header">
+            <h2><img src="{{STATIC_URL}}img/void.gif" class="icons icon-mobil" />Aplicaciones Móvil</h2>
+          </div>
+          <div class="info-box-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Mauris vestibulum orci sit amet arcu feugiat at lacinia purus accumsan. 
+              Etiam non magna eget mauris consequat interdum.<br /><br />
+              Maecenas ac vestibulum erat. Fusce eget elit et turpis laoreet tristique sit amet sit amet libero
+            </p>
+            <p><a class="btn btn-primary" href="">Contactar</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--       ROW 2              -->
+    <section class="whyus-header">
+      <div class="row-fluid">  
+        <div class="span12">        
+          <hr />
+          <h3>¿Por qué Nosotros?</h3>        
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="whyus">
+      <!--       ROW 3              -->
+      <div class="row-fluid"> 
+        <div class="span3">
+          <h4><img src="{{STATIC_URL}}img/void.gif" class="black-icons icon-heart" />Amamos lo que hacemos</h4>
+          <p>
+            Sus preocupaciones son las nuestras, y nuestro éxito será el suyo, 
+            somos una mano amiga que velará por sus mismos intereses.
+          </p>
+        </div>
+        <div class="span3">
+          <h4><img src="{{STATIC_URL}}img/void.gif" class="black-icons icon-star" />Lo hacemos bien</h4>
+          <p>
+            No solo nos preocupamos por terminar el trabajo, nos preocupa que quede bien hecho 
+            y cumpla nuestros estándares de calidad.
+          </p>
+        </div>
+        <div class="span3">
+          <h4><img src="{{STATIC_URL}}img/void.gif" class="black-icons icon-pig" />Al alcance de todos</h4>
+          <p>
+            Desarrollos ágiles que nos permiten dar precios competentes en el mercado con 
+            gran calidad, además de las posibles formas de pago.
+          </p>
+        </div>
+        <div class="span3">
+          <h4><img src="{{STATIC_URL}}img/void.gif" class="black-icons icon-path" />El poder la ingeniería</h4>
+          <p>
+            Cada nuevo proyecto es abordados desde el más alto perfil profesional, utilizando métodos 
+            y herramientas de la ingeniería para garantizar el éxito del mismo
+          </p>
+        </div>
+      </div>
+
+      <!--       ROW 4              -->
+      <div class="row-fluid"> 
+        <div class="span3">
+          <h4><img src="{{STATIC_URL}}img/void.gif" class="black-icons icon-performance" />Eficiencia</h4>
+          <p>
+            No nos basta con que el prodcuto cumpla sus funciones, además de hacerlo bien, debe hacerlo en la forma más optima, ahorrando al máximo los recursos
+          </p>
+        </div>
+        <div class="span3">
+          <h4><img src="{{STATIC_URL}}img/void.gif" class="black-icons icon-bulb" />Últimas Tecnologías</h4>
+          <p>
+            Nos caracterizamos por utilizar tecnología de vanguardía, cumpliendo estándares web y siempre al tanto de sus tendencias, garantizando así, un producto contemporáneo.
+          </p>
+        </div>
+        <div class="span3">
+          <h4><img src="{{STATIC_URL}}img/void.gif" class="black-icons icon-calendar" />En los tiempos que son</h4>
+          <p>
+            No prometemos productos en una semana o días, nuestra experiencia nos permite decir de forma cierta el tiempo requerido para que su producto se encuentre completo
+          </p>
+        </div>
+        <div class="span3">
+          <h4><img src="{{STATIC_URL}}img/void.gif" class="black-icons icon-feedback" />Retroalimentación</h4>
+          <p>
+           Entendemos la importancia de la comunicación, por eso fortalecemos las relaciones con nuestros cliente creando una retroalimentación constante sobre su producto.
+          </p>
+        </div>
+      </div>
+      <hr />
+    </section>
+  </section>  <!--  / MAIN CONTAINER  -->
+
+
+
+{% endblock %}
+
+{% block style %}
+{% endblock %}
+
+{% block js %}
+{% endblock %}
