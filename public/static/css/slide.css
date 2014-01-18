@@ -16,9 +16,9 @@ Aside from these comments, you may modify and distribute this file as you please
 
 
 #slide {
-	height: 370px;
+	height: 450px;
 	position: relative;
-	margin: 20px auto 0;
+	margin: 0px auto 0;
 	min-width: 960px;
 	overflow: hidden;
 	background-color: #3e9bdb;

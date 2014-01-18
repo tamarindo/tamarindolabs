@@ -26,18 +26,18 @@
           </a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Inicio</a></li>
+              <li class="active"><a href="/">Inicio</a></li>
               <li><a href="#about">Portafolio</a></li>
             </ul>
           </div>
           <!--/.nav-collapse 1 -->
-          <a class="tamLogo" href="#">
+          <a class="tamLogo" href="/">
             <img src="{{STATIC_URL}}img/navlogo.gif" alt="Tamarindo Labs" title="Inicio Tamarindo Labs" />
           </a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="#"><a href="#">Servicios</a></li>
-              <li><a href="#">Contacto</a></li>
+              <li class="#"><a href="/servicios">Servicios</a></li>
+              <li><a href="/contactenos">Contacto</a></li>
             </ul>
           </div>  
         </div>
@@ -46,8 +46,10 @@
     </nav>
 
             <div class="wrapper" >
+              <div class="posicionadorbase">
                 {% block content %}
                 {% endblock %}
+              </div>
             </div>
 
     <!-- footer -->

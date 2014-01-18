@@ -17,10 +17,16 @@ h1 strong{font-family:CabinBold,Helvetica,Arial,sans-serif;font-weight:bold;}
 h1 .h1hidden{display:none;}
 @media (max-width: 979px)  {
 .navbar-inner .container {padding-left: 0% !important;margin-left: 0px !important ;text-align: center !important;}
-.wrapper {margin-top:0px !important;}
+.wrapper {margin-top:-20px !important;}
 .tamLogo{position: absolute !important;top:5px !important;left:47% !important;}
 }
-.wrapper{margin-top:60px;}
+@media (min-width: 979px)  {
+.posicionadorbase {margin-top: 40px;}
+}
+@media (max-width: 767px){
+body {padding-right: 0px !important;padding-left: 0px !important;}
+.wrapper {padding-right: 20px !important;padding-left: 20px !important;}
+}
 .navbar .tamLogo{display:block;float:left;}
 .navbar .nav{margin:0 5px;}.navbar .nav li a{font-family:BebasRegular,Helvetica,Arial,sans-serif;font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;color:#999999;float:none;padding:9px 10px 11px;line-height:19px;text-decoration:none;text-shadow:0 1px 0 #000000;}
 .navbar-inner .container{padding-left:50%;margin-left:-172px;}
@@ -31,7 +37,7 @@ h1 .h1hidden{display:none;}
 .whyus{margin:30px 0;}.whyus h4{font-family:CabinBold,Helvetica,Arial,sans-serif;font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;color:#121518;}
 .whyus p{font-family:PolyRegular,Helvetica,Arial,sans-serif;font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;color:#2d2f32;padding:10px 5px;}
 hr{width:100%;border-top:1px solid #E2DEDE;}
-footer{position:relative;margin-top:-30px;background:url("../img/footer-bright.jpg") center 0 no-repeat;height:265px;width:100%;}footer figure,footer img{margin:0;position:absolute;}
+footer{position:relative;background:url("../img/footer-bright.jpg") center 0 no-repeat;height:265px;width:100%;}footer figure,footer img{margin:0;position:absolute;}
 footer .footer-box{bottom:0;background:url("../img/footer-box.jpg") #121518 center 0 no-repeat;height:132px;width:100%;}
 footer .footer-logo{left:50%;margin-left:-40px;width:81px;height:76px;bottom:25px;}
 footer .paper{background:url("../img/footer-leaf.png") center 40px transparent no-repeat;width:406px;height:102px;margin-left:-203px;left:50%;bottom:119px;cursor:pointer;transition:background-position 0.8s ease-out;-webkit-transition:background-position 0.8s ease-out;-moz-transition:background-position 0.8s ease-out;-o-transition:background-position 0.8s ease-out;}
@@ -41,3 +47,22 @@ footer .footer-contact{width:218px;height:58px;bottom:10px;margin-left:90px;opac
 footer .footer-contact:hover{opacity:1;}
 .btn{font-family:CabinBold,Helvetica,Arial,sans-serif;font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;color:#ffffff;text-shadow:1px 1px 2px rgba(0, 57, 180, 0.6);padding:7px 9px;}
 @font-face{font-family:'BebasRegular';src:url('../fonts/Bebas/BEBAS___-webfont.eot');src:url('../fonts/Bebas/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/Bebas/BEBAS___-webfont.woff') format('woff'),url('../fonts/Bebas/BEBAS___-webfont.ttf') format('truetype'),url('../fonts/Bebas/BEBAS___-webfont.svg#BebasRegular') format('svg');font-weight:normal;font-style:normal;}@font-face{font-family:'CabinRegular';src:url('../fonts/Cabin/Cabin-Regular-webfont.eot');src:url('../fonts/Cabin/Cabin-Regular-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/Cabin/Cabin-Regular-webfont.woff') format('woff'),url('../fonts/Cabin/Cabin-Regular-webfont.ttf') format('truetype'),url('../fonts/Cabin/Cabin-Regular-webfont.svg#CabinRegular') format('svg');font-weight:normal;font-style:normal;}@font-face{font-family:'CabinBold';src:url('../fonts/Cabin/Cabin-Bold-webfont.eot');src:url('../fonts/Cabin/Cabin-Bold-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/Cabin/Cabin-Bold-webfont.woff') format('woff'),url('../fonts/Cabin/Cabin-Bold-webfont.ttf') format('truetype'),url('../fonts/Cabin/Cabin-Bold-webfont.svg#CabinBold') format('svg');font-weight:normal;font-style:normal;}@font-face{font-family:'PolyItalic';src:url('../fonts/Poly/Poly-Italic-webfont.eot');src:url('../fonts/Poly/Poly-Italic-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/Poly/Poly-Italic-webfont.woff') format('woff'),url('../fonts/Poly/Poly-Italic-webfont.ttf') format('truetype'),url('../fonts/Poly/Poly-Italic-webfont.svg#PolyItalic') format('svg');font-weight:normal;font-style:normal;}@font-face{font-family:'PolyRegular';src:url('../fonts/Poly/Poly-Regular-webfont.eot');src:url('../fonts/Poly/Poly-Regular-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/Poly/Poly-Regular-webfont.woff') format('woff'),url('../fonts/Poly/Poly-Regular-webfont.ttf') format('truetype'),url('../fonts/Poly/Poly-Regular-webfont.svg#PolyRegular') format('svg');font-weight:normal;font-style:normal;}
+.posicionadorbase{overflow: hidden;}
+/*  servicios */
+.panel_servicios{
+	background: white;
+	margin-top: 22px;
+	margin-bottom: 22px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.panelvisible {
+min-height: 345px;
+}
+.pnl{width: 50%;
+	float: left;
+	height: 345px;}
+#panelDisenoDesarrollo{border-bottom: solid 3px #009BDB; }
+#panelAdminwebsite{border-bottom: solid 3px #BA007C;}
+#panelAppmoviles{border-bottom: solid 3px #FEEE00;}
