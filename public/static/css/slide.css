@@ -330,10 +330,10 @@ h2 {
 	max-width: 40%;
 	top: 800px;
 
-	-webkit-transition-property: left top;
-	-moz-transition-property: left top;
-	-o-transition-property: left top;
-	-ms-transition-property: left top;
+	-webkit-transition-property:  top;
+	-moz-transition-property:  top;
+	-o-transition-property:  top;
+	-ms-transition-property:  top;
 	transition-property: left top;
 	z-index: 6;
 }
@@ -525,4 +525,106 @@ h2 {
 .sequence-fallback .kite.animate-in {
     left: 20%;
     top: 200px;
+}
+
+/* Silider Servicios */
+
+.appslider {
+	left: 13%;
+	max-width: 40%;
+	top: 800px;
+
+	-webkit-transition-property:  top;
+	-moz-transition-property:  top;
+	-o-transition-property:  top;
+	-ms-transition-property:  top;
+	transition-property: left top;
+	z-index: 6;
+}
+
+.appslider.animate-in {
+	left: 13%;
+	top: 91px;
+
+
+	-webkit-transition-duration: 4s;
+	-moz-transition-duration: 4s;
+	-o-transition-duration: 4s;
+	-ms-transition-duration: 4s;
+	transition-duration: 4s;
+
+	-webkit-transition-property: left top -webkit-transform;
+	-moz-transition-property: left top -moz-transform;
+	-o-transition-property: left top -o-transform;
+	-ms-transition-property: left top -ms-transform;
+	transition-property: left top transform;
+	z-index: 4;
+}
+
+.appslider.animate-out {
+	left: 13%;
+	top: 800px;
+
+	-webkit-transition-duration: 4s;
+	-moz-transition-duration: 4s;
+	-o-transition-duration: 4s;
+	-ms-transition-duration: 4s;
+	transition-duration: 4s;
+
+	-webkit-transition-property: left top -webkit-transform;
+	-moz-transition-property: left top -moz-transform;
+	-o-transition-property: left top -o-transform;
+	-ms-transition-property: left top -ms-transform;
+	transition-property: left top transform;
+	z-index: 2;
+}
+
+.iconosslider {
+	left: 0%;
+	max-width: 40%;
+	top: -800px;
+
+	-webkit-transition-property:  top;
+	-moz-transition-property:  top;
+	-o-transition-property:  top;
+	-ms-transition-property:  top;
+	transition-property: left top;
+	z-index: 6;
+}
+
+.iconosslider.animate-in {
+	left: 0%;
+	top: 91px;
+
+
+	-webkit-transition-duration: 4s;
+	-moz-transition-duration: 4s;
+	-o-transition-duration: 4s;
+	-ms-transition-duration: 4s;
+	transition-duration: 4s;
+
+	-webkit-transition-property: left top -webkit-transform;
+	-moz-transition-property: left top -moz-transform;
+	-o-transition-property: left top -o-transform;
+	-ms-transition-property: left top -ms-transform;
+	transition-property: left top transform;
+	z-index: 4;
+}
+
+.iconosslider.animate-out {
+	left: 0%;
+	top: 800px;
+
+	-webkit-transition-duration: 4s;
+	-moz-transition-duration: 4s;
+	-o-transition-duration: 4s;
+	-ms-transition-duration: 4s;
+	transition-duration: 4s;
+
+	-webkit-transition-property: left top -webkit-transform;
+	-moz-transition-property: left top -moz-transform;
+	-o-transition-property: left top -o-transform;
+	-ms-transition-property: left top -ms-transform;
+	transition-property: left top transform;
+	z-index: 2;
 }
