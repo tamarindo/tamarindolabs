@@ -14,3 +14,5 @@ def administrator(request):
     template = "administrator.html"
     return render_to_response(template, locals(), context_instance=RequestContext(request))
    
+
+  
