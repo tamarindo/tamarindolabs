@@ -1,11 +1,12 @@
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-SECRET_KEY = 'fg696j@d_!bud=726*q7#=#u1@2q0t5sda6$@ff*55%^@dersbg'
+SECRET_KEY = 'fg696j@d_!bud=s726*q7#=#u1@2q0t5sda6$@ff*55%^@dersbg'
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 ALLOWED_HOSTS = []
-APPS = ["apps.website"]
+APPS = ["apps.website",
+        "apps.admin_sas"]
 try:
     import django_extensions
     APPS += ["django_extensions"]

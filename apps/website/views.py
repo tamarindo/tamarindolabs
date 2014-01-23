@@ -18,7 +18,7 @@ def servicios(request):
     template = "servicios.html"
     return render_to_response(template, locals(), context_instance=RequestContext(request))
    
-def contacto(request):
+def contactenos(request):
 
     template = "contacto.html"
     return render_to_response(template, locals(), context_instance=RequestContext(request))
