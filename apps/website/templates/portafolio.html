@@ -19,20 +19,20 @@
  </section>
 	<div id="panelSelectProduct" class="row-fluid">
 		<div class="center_Interno span12">
-				<span class="link_producto_portafolio " id="Diseno"></span>
-				<span class="link_producto_portafolio " id="Paginasweb"></span>
-				<span class="link_producto_portafolio " id="Aplicaciones"></span>
-				<span class="link_producto_portafolio " id="SocialMedia"></span>	
-				<span style="margin-right: 0px;" class="link_producto_portafolio " id="AppsMovil"></span>
+				<span class="link_producto_portafolio " data-service="diseno" id="Diseno"></span>
+				<span class="link_producto_portafolio " data-service="Paginasweb" id="Paginasweb"></span>
+				<span class="link_producto_portafolio " data-service="Aplicaciones" id="Aplicaciones"></span>
+				<span class="link_producto_portafolio " data-service="SocialMedia" id="SocialMedia"></span>	
+				<span style="margin-right: 0px;"  data-service="AppsMovil" class="link_producto_portafolio " id="AppsMovil"></span>
 		</div>
 	</div>
 	<div class="content_panels " >
 	
 	<!-- panel -->
-		<div class="panel_portafolio row-fluid">
-			<div class="info_panle span11">
+		<div class="panel_portafolio ser_diseno row-fluid" >
+			<div class="info_panle span12">
 			</div>
-			<div class="items_panel">
+			<div class="items_panel " >
 			 	<div class="item"></div>
 				<div class="item"></div>
 				<div class="item"></div>
@@ -47,6 +47,87 @@
 				<div class="item"></div>
 			</div>
 		</div>
+
+	<!-- panel -->
+		<div class="panel_portafolio ser_Paginasweb row-fluid" >
+			<div class="info_panle span12">
+			</div>
+			<div class="items_panel " >
+			 	<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			 	<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			 	<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			 	<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+		</div>
+
+	<!-- panel -->
+		<div class="panel_portafolio ser_Aplicaciones row-fluid" >
+			<div class="info_panle span12">
+			</div>
+			<div class="items_panel " >
+			 	<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			 	<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			 	<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			 	<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+		</div>
+
+	<!-- panel -->
+		<div class="panel_portafolio ser_SocialMedia row-fluid" >
+			<div class="info_panle span12">
+			</div>
+			<div class="items_panel " >
+			 	<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			 	<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			 	<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			 	<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+		</div>
+
+	<!-- panel -->
+		<div class="panel_portafolio ser_AppsMovil row-fluid" >
+			<div class="info_panle span12">
+			</div>
+			<div class="items_panel " >
+			 	<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			 	<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			 	<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			 	<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+		</div>
+
 	</div>
 
 </div>
@@ -59,4 +140,14 @@
 {% endblock %}
 
 {% block js %}
+<script type="text/javascript">
+$( document ).ready(function() {
+	$('.link_producto_portafolio').on('click',
+		function(e){
+			$('.panel_portafolio').hide("slow");
+			var service = $(this).data().service;
+			$('.ser_'+service).show("slow");	
+		});
+});
+</script>
 {% endblock %}

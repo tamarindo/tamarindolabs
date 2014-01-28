@@ -118,6 +118,9 @@ footer .footer-contact:hover{opacity:1;}
 margin-top: 35px;
 margin-bottom: 35px;
 }
+.panel_portafolio{
+display: none;
+}
 .items_panel .item {
 height: 135px;
 width: 204px;
@@ -128,6 +131,13 @@ float: left;
 border-radius: 10px;
 margin: 12px;
 }
+.info_panle{
+height: 175px;
+border: 2px solid white;
+border-radius: 13px;
+margin: 0 auto !important;
+float: none !important;
+}
 
 .link_producto_portafolio {
 background: black;
@@ -137,7 +147,9 @@ float: left;
 margin-right: 5%;
 border-radius: 50%;
 cursor: pointer;
+opacity: 0.6;
 }
+.link_producto_portafolio:hover { opacity: 1}
 .center_Interno{ min-width:460px }
 
 .link_producto_portafolio#Diseno{ background: #009EE0;}
