@@ -144,9 +144,9 @@
 $( document ).ready(function() {
 	$('.link_producto_portafolio').on('click',
 		function(e){
-			$('.panel_portafolio').hide("slow");
+			$('.panel_portafolio').hide(1);
 			var service = $(this).data().service;
-			$('.ser_'+service).show("slow");	
+			$('.ser_'+service).show(1);	
 		});
 });
 </script>
