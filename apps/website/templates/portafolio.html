@@ -5,8 +5,10 @@
 <div class="contenedor_base container ">
  <section id="">
    <div id="sequence">
+
      <img class="prev" src="{{STATIC_URL}}img/bt-prev.png" alt="Previous" />
      <img class="next" src="{{STATIC_URL}}img/bt-next.png" alt="Next" />
+   
      <ul>
        <li>
 
@@ -17,20 +19,27 @@
      </ul>
    </div>
  </section>
-	<div id="panelSelectProduct" class="row-fluid">
-		<div class="center_Interno span12">
-				<span class="link_producto_portafolio " data-service="diseno" id="Diseno"></span>
-				<span class="link_producto_portafolio " data-service="Paginasweb" id="Paginasweb"></span>
-				<span class="link_producto_portafolio " data-service="Aplicaciones" id="Aplicaciones"></span>
-				<span class="link_producto_portafolio " data-service="SocialMedia" id="SocialMedia"></span>	
-				<span style="margin-right: 0px;"  data-service="AppsMovil" class="link_producto_portafolio " id="AppsMovil"></span>
+		<div class="center_Interno_link_portafolio ">
+				<a >
+					<div id="tooltipdiseno" class="tool_tip_boby">
+						<div class="tool_pri"> Desarrollo Web</div>
+						<div class="tool_botton"></div>
+					 </div>
+					<img class="link_portafolio img-circle" src='{{STATIC_URL}}img/bnt_cob_pnl.png' data-service="diseno" id="Diseno">
+				</a>
+				<a >
+					<div id="tooltipPaginasweb" class="tool_tip_boby">
+						<div class="tool_pri"> Diseño Grafico</div>
+						<div class="tool_botton"></div>
+					 </div>
+					<img class="link_portafolio img-circle "src='{{STATIC_URL}}img/bnt_admin_pnl.png' data-service="Paginasweb" id="Paginasweb">
+				</a>
 		</div>
-	</div>
 	<div class="content_panels " >
 	
 	<!-- panel -->
 		<div class="panel_portafolio ser_diseno row-fluid" >
-			<div class="info_panle span12">
+			<div class="info_panle span12" style="background-color:blue">
 			</div>
 			<div class="items_panel " >
 			 	<div class="item"></div>
@@ -50,7 +59,7 @@
 
 	<!-- panel -->
 		<div class="panel_portafolio ser_Paginasweb row-fluid" >
-			<div class="info_panle span12">
+			<div class="info_panle span12" style="background-color:red" > 
 			</div>
 			<div class="items_panel " >
 			 	<div class="item"></div>
@@ -68,65 +77,6 @@
 			</div>
 		</div>
 
-	<!-- panel -->
-		<div class="panel_portafolio ser_Aplicaciones row-fluid" >
-			<div class="info_panle span12">
-			</div>
-			<div class="items_panel " >
-			 	<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-			 	<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-			 	<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-			 	<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-			</div>
-		</div>
-
-	<!-- panel -->
-		<div class="panel_portafolio ser_SocialMedia row-fluid" >
-			<div class="info_panle span12">
-			</div>
-			<div class="items_panel " >
-			 	<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-			 	<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-			 	<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-			 	<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-			</div>
-		</div>
-
-	<!-- panel -->
-		<div class="panel_portafolio ser_AppsMovil row-fluid" >
-			<div class="info_panle span12">
-			</div>
-			<div class="items_panel " >
-			 	<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-			 	<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-			 	<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-			 	<div class="item"></div>
-				<div class="item"></div>
-				<div class="item"></div>
-			</div>
-		</div>
 
 	</div>
 
@@ -142,12 +92,26 @@
 {% block js %}
 <script type="text/javascript">
 $( document ).ready(function() {
-	$('.link_producto_portafolio').on('click',
+
+	$('.link_portafolio').on('click',
 		function(e){
-			$('.panel_portafolio').hide(1);
 			var service = $(this).data().service;
+			$('.panel_portafolio').hide(1);
 			$('.ser_'+service).show(1);	
 		});
+
+	$('.link_portafolio').hover(function(){
+			service = $(this).data().service;
+			console.log("sd");
+			$('#tooltip'+service).css('display','block');		
+		},
+		function(){
+			service = $(this).data().service;
+			console.log("sd");
+			$('#tooltip'+service).css('display','none');		
+		});
+
+	$(".center_Interno_link_portafolio img:first-of-type").click()
 });
 </script>
 {% endblock %}

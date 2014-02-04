@@ -139,25 +139,80 @@ margin: 0 auto !important;
 float: none !important;
 }
 
-.link_producto_portafolio {
-background: black;
-width: 16%;
-display: block;
-float: left;
-margin-right: 5%;
-border-radius: 50%;
-cursor: pointer;
-opacity: 0.6;
-}
-.link_producto_portafolio:hover { opacity: 1}
-.center_Interno{ min-width:460px }
 
-.link_producto_portafolio#Diseno{ background: #009EE0;}
-.link_producto_portafolio#Diseno:hover{ box-shadow: 0px 0px 28px #009EE0;}
-.link_producto_portafolio#Paginasweb{ background: #E2007A;}
-.link_producto_portafolio#Paginasweb:hover{ box-shadow: 0px 0px 28px #E2007A;}
-.link_producto_portafolio#Aplicaciones{ background: #FFED00;}
-.link_producto_portafolio#Aplicaciones:hover{box-shadow: 0px 0px 28px #FFED00;}
-.link_producto_portafolio#SocialMedia{ background: #009664;}
-.link_producto_portafolio#SocialMedia:hover{box-shadow: 0px 0px 28px #009664;}
-.link_producto_portafolio#AppsMovil:hover{box-shadow: 0px 0px 28px black;}
+.link_portafolio:hover { opacity: 1}
+
+.center_Interno_link_portafolio {
+margin: 0 auto;
+width: 25%;
+min-width: 150px;
+height: 160px;
+}
+
+.center_Interno_link_portafolio a{ position: relative;}
+
+
+.link_portafolio {
+width: 43%;
+height: auto;
+float: left;
+margin-right: 7%;
+cursor: pointer;
+}
+.tool_tip_boby{position: absolute;}
+
+.link_portafolio#Diseno{ background: #009EE0;}
+.link_portafolio#Diseno:hover{ box-shadow: 0px 0px 28px #009EE0;}
+.link_portafolio#Paginasweb{ background: #E2007A;}
+.link_portafolio#Paginasweb:hover{ box-shadow: 0px 0px 28px #E2007A;}
+.link_portafolio#Aplicaciones{ background: #FFED00;}
+.link_portafolio#Aplicaciones:hover{box-shadow: 0px 0px 28px #FFED00;}
+.link_portafolio#SocialMedia{ background: #009664;}
+.link_portafolio#SocialMedia:hover{box-shadow: 0px 0px 28px #009664;}
+.link_portafolio#AppsMovil:hover{box-shadow: 0px 0px 28px black;}
+
+
+.img-circle {
+-webkit-border-radius: 500px;
+-moz-border-radius: 500px;
+border-radius: 500px;
+}
+
+
+.tool_tip_boby {
+display: none;
+top: -51px;
+width: 140px;
+border-radius: 18px;
+text-align: center;
+position: absolute;
+font-size: 17px;
+}
+.tool_tip_boby .tool_pri {
+
+background: white;
+padding: 10px;
+border-radius: 18px;
+text-align: center;
+}
+
+.tool_tip_boby .tool_botton {
+
+background: url(../img/abj.png) center -1px no-repeat;;
+padding: 10px;
+border-radius: 18px;
+text-align: center;
+}
+
+#tooltipdiseno{ }
+
+
+@media (min-width: 1200px ){
+.tool_tip_boby {left: -7px;}
+}
+@media (max-width: 1200px ) and (min-width: 980px ){
+.tool_tip_boby {left: -19px}
+}
+@media (max-width: 980px ){
+.tool_tip_boby {left: -35px};
+}
