@@ -125,17 +125,35 @@ display: none;
 height: 135px;
 width: 204px;
 display: block;
-margin: 18px;
 border: 3px solid white;
 float: left;
 border-radius: 10px;
-margin: 12px;
+margin: 16px 12px;
+position: relative;
+overflow: hidden;
+cursor: pointer;
 }
+.item div {
+position: absolute;
+width: 207px;
+height: 20px;
+background: blue;
+bottom: 0px;
+color: white;
+text-align: center;
+padding-top: 3px;
+padding-bottom: 3px;
+display: none;
+}
+.item div a{
+color: white;
+}
+
 .info_panle{
 height: 175px;
 border: 2px solid white;
 border-radius: 13px;
-margin: 0 auto !important;
+margin: 15px auto !important;
 float: none !important;
 }
 
@@ -146,7 +164,7 @@ float: none !important;
 margin: 0 auto;
 width: 25%;
 min-width: 150px;
-height: 160px;
+height: 130px;
 }
 
 .center_Interno_link_portafolio a{ position: relative;}
@@ -204,15 +222,16 @@ border-radius: 18px;
 text-align: center;
 }
 
-#tooltipdiseno{ }
-
-
 @media (min-width: 1200px ){
 .tool_tip_boby {left: -7px;}
+.center_Interno_link_portafolio {margin-bottom: 30px !important;}
 }
 @media (max-width: 1200px ) and (min-width: 980px ){
 .tool_tip_boby {left: -19px}
 }
 @media (max-width: 980px ){
-.tool_tip_boby {left: -35px};
+.tool_tip_boby {left: -35px;}
+.center_Interno_link_portafolio {height: 96px;}
 }
+
+.item:hover div { display: block;};

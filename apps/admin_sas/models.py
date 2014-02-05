@@ -47,9 +47,9 @@ class Service(models.Model):
     price = models.IntegerField(max_length=20,verbose_name=_("Precio"))   
     description = models.CharField(max_length=900,null=True,blank=True,verbose_name=_("descripcion"))
     # Requerimientos
-    type_service =  models.CharField(max_length=250,verbose_name=_("Valor"))
+    type_service =  models.CharField(max_length=250,verbose_name=_("tipo de servicio"))
     time_license  = models.IntegerField(max_length=20,verbose_name=_("tiempo licencia")) 
-    developed_by = models.CharField(max_length=250,null=True,blank=True,verbose_name=_("descripcion"))
+    developed_by = models.CharField(max_length=250,null=True,blank=True,verbose_name=_("desarollado por"))
     # ------ datos para todas las tablas
     is_active = models.BooleanField(default=True)
     date_added = models.DateTimeField(auto_now_add=True)
@@ -72,7 +72,7 @@ class Company(models.Model):
     city = models.CharField(max_length=60, verbose_name=_("Ciudad"), null=True, blank=True)
     state = models.CharField(max_length=60, verbose_name=_("Estado"), null=True, blank=True)        
     country = models.CharField(max_length=60, verbose_name=_("Pais"), null=True, blank=True)
-    commercial_activity = models.CharField(max_length=60, verbose_name=_("Pais"), null=True, blank=True)     
+    commercial_activity = models.CharField(max_length=60, verbose_name=_("actividad comercial"), null=True, blank=True)     
     logo = models.FileField(upload_to=settings.MEDIA_ROOT + "/logos", max_length=400, null=True, blank=True)
     service = models.ForeignKey(Service, verbose_name=_("Service"))
     # ------ datos para todas las tablas
