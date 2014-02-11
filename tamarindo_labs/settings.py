@@ -79,6 +79,7 @@ USE_TZ = True
 STATICFILES_DIRS = (
     os.sep.join([os.path.dirname(os.path.dirname(__file__)), 'public/static']),
 )
+MEDIA_ROOT = os.sep.join([os.path.dirname(os.path.dirname(__file__)), 'public/media'])
 
 STATIC_URL= '/static/'
 MEDIA_URL = '/media/'

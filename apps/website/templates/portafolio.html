@@ -41,36 +41,14 @@
 		<div class="panel_portafolio ser_diseno row-fluid" >
 			<div class="info_panle span12" style="background-color:blue">
 			</div>
+			{% for item in json %}
 			<div class="items_panel " >
 			 	<div class="item">
-			 		<img src="">
-			 		<div><a>link</a></div>
-			 	</div>
-				<div class="item">
-			 		<div><a>link</a></div>			
-				</div>
-			 	<div class="item">
-			 		<img src="">
-			 		<div><a>link</a></div>
-			 	</div>
-				<div class="item">
-			 		<div><a>link</a></div>			
-				</div>
-			 	<div class="item">
-			 		<img src="">
-			 		<div><a>link</a></div>
-			 	</div>
-				<div class="item">
-			 		<div><a>link</a></div>			
-				</div>
-			 	<div class="item">
-			 		<img src="">
-			 		<div><a>link</a></div>
-			 	</div>
-				<div class="item">
-			 		<div><a>link</a></div>			
-				</div>
+			 		<img src="{{item.imagen}}">
+			 		<div><a>link {{item.name}}</a></div>
+			 	</div>	
 			</div>
+			{% endfor %}
 		</div>
 
 	<!-- panel -->

@@ -88,10 +88,10 @@ class Company(models.Model):
 class implementation(models.Model):
     service = models.ForeignKey(Service)
     company = models.ForeignKey(Company)
-    name = models.CharField(max_length=30, verbose_name=_("nombre"))
+    name = models.CharField(max_length=30, verbose_name=_("nombre") ,null=True)
     #discounts = models.BooleanField() falta implementacion
     release_date = models.DateTimeField(auto_now_add=True)
-    version =  models.CharField(max_length=30, verbose_name=_("provedor"))
+    version =  models.CharField(max_length=30, verbose_name=_("version"),null=True)
     #additional_service =  models.ManyToManyField(Service) 
     # ------ datos para todas las tablas
     is_active = models.BooleanField(default=True)
@@ -100,16 +100,20 @@ class implementation(models.Model):
 
     objects = GenericManager()
 
+    def get_imagenes_portafolio(self):
+        imagenes = imagen_portfolio.objects.filter(implementation=self)
+        return imagenes
+
     def __unicode__(self):
         return self.name
 
 
-class image_portfolio(models.Model):
-    name = models.CharField(max_length=30, verbose_name=_("nombre")) 
+class imagen_portfolio(models.Model):
+    name = models.CharField(max_length=30, verbose_name=_("nombre") ,null=True) 
     descripcion =  models.CharField(max_length=900,null=True,blank=True,verbose_name=_("descripcion"))
     img = models.FileField(upload_to=settings.MEDIA_ROOT + "/img", max_length=400, null=True, blank=True)
     order = models.IntegerField(max_length=20,verbose_name=_("orden"))
-    service = models.ForeignKey(Service)
+    implementation = models.ForeignKey(implementation)
     # ------ datos para todas las tablas
     is_active = models.BooleanField(default=True)
     date_added = models.DateTimeField(auto_now_add=True)
