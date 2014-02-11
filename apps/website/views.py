@@ -14,10 +14,6 @@ def home(request):
 
 def portafolio(request):
 	implementaciones = implementation.objects.get_all_active().order_by('?')
-	json = []
-	for x in implementaciones:
-		json.append({ 'imagen' : '/media/'+x.get_imagenes_portafolio()[0].img.url.split("public/media/")[1], 'titulo' : x.get_imagenes_portafolio()[0].name})
-	pprint.pprint(json)
 	template = "portafolio.html"
 	
 	return render_to_response(template, locals() , context_instance=RequestContext(request))

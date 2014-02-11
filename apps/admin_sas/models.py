@@ -73,8 +73,7 @@ class Company(models.Model):
     state = models.CharField(max_length=60, verbose_name=_("Estado"), null=True, blank=True)        
     country = models.CharField(max_length=60, verbose_name=_("Pais"), null=True, blank=True)
     commercial_activity = models.CharField(max_length=60, verbose_name=_("actividad comercial"), null=True, blank=True)     
-    logo = models.FileField(upload_to=settings.MEDIA_ROOT + "/logos", max_length=400, null=True, blank=True)
-    service = models.ForeignKey(Service, verbose_name=_("Service"))
+    logo = models.FileField(upload_to="./logos", max_length=400, null=True, blank=True)
     # ------ datos para todas las tablas
     is_active = models.BooleanField(default=True)
     date_added = models.DateTimeField(auto_now_add=True)
@@ -86,18 +85,18 @@ class Company(models.Model):
 
 
 class implementation(models.Model):
-    service = models.ForeignKey(Service)
-    company = models.ForeignKey(Company)
+    service = models.ForeignKey(Service ,null=True)
+    company = models.ForeignKey(Company ,null=True)
     name = models.CharField(max_length=30, verbose_name=_("nombre") ,null=True)
     #discounts = models.BooleanField() falta implementacion
     release_date = models.DateTimeField(auto_now_add=True)
     version =  models.CharField(max_length=30, verbose_name=_("version"),null=True)
     #additional_service =  models.ManyToManyField(Service) 
     # ------ datos para todas las tablas
-    is_active = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True )
     date_added = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
-
+    logo = models.FileField(upload_to="./img", max_length=400, null=True, blank=True)
     objects = GenericManager()
 
     def get_imagenes_portafolio(self):
@@ -113,7 +112,7 @@ class imagen_portfolio(models.Model):
     descripcion =  models.CharField(max_length=900,null=True,blank=True,verbose_name=_("descripcion"))
     img = models.FileField(upload_to=settings.MEDIA_ROOT + "/img", max_length=400, null=True, blank=True)
     order = models.IntegerField(max_length=20,verbose_name=_("orden"))
-    implementation = models.ForeignKey(implementation)
+    implementation = models.ForeignKey(implementation ,null=True)
     # ------ datos para todas las tablas
     is_active = models.BooleanField(default=True)
     date_added = models.DateTimeField(auto_now_add=True)
@@ -141,9 +140,9 @@ class DniType(models.Model):
 
 class UserProfile(models.Model):
     """Extended profile to Django User model"""
-    user = models.OneToOneField(User, verbose_name=_("Usuario"))
+    user = models.OneToOneField(User, verbose_name=_("Usuario") ,null=True)
     admin_user = models.BooleanField(default=False)
-    dni_type = models.ForeignKey(DniType)
+    dni_type = models.ForeignKey(DniType ,null=True)
     dni = models.CharField(max_length=30, null=False, verbose_name=_("DNI"))
     phone1 = models.CharField(max_length=30, verbose_name=_("Telefono 1"), null=True, blank=True)
     phone2 = models.CharField(max_length=30, verbose_name=_("Telefono 2"), null=True, blank=True)

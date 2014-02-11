@@ -2,23 +2,31 @@
 {% load i18n %}
 {% block title %}{% trans 'servicios' %}{% endblock %}
 {% block content %}
-<div class="contenedor_base container ">
- <section id="">
-   <div id="sequence">
-
+ <section id="panel_sleder_servicios">
+  <div id="panel_principal">
+   <div  id="sequence">
      <img class="prev" src="{{STATIC_URL}}img/bt-prev.png" alt="Previous" />
      <img class="next" src="{{STATIC_URL}}img/bt-next.png" alt="Next" />
    
      <ul>
        <li>
-
+       		<div class="info animate-in text_siler_servicos">
+       			<h2> Portafilio Profecional </h2>
+	        	<p> Dime que haz echo y te dire quien eres</p>
+       		</div>
        </li>
-       <li>
-        
+       <li >
+       		<div class="info text_siler_servicos">
+       			<h2> Podra mi empresa lograr actualizarse a nuevo siglo? </h2>
+				<p> Si ellos pudieron Adelante!</p>
+       		</div>
        </li>
      </ul>
    </div>
+   <div id="renderplantilla"></div>
+</div>
  </section>
+<div class="contenedor_base container ">
 		<div class="center_Interno_link_portafolio ">
 				<a >
 					<div id="tooltipdiseno" class="tool_tip_boby">
@@ -39,51 +47,37 @@
 	
 	<!-- panel -->
 		<div class="panel_portafolio ser_diseno row-fluid" >
-			<div class="info_panle span12" style="background-color:blue">
+			<div class=" span12 title_portafolio ">
+				<h2> Diseño web </h2>
+				<p> Puerta virtual de su negocio ñañaña</p>
 			</div>
-			{% for item in json %}
 			<div class="items_panel " >
-			 	<div class="item">
-			 		<img src="{{item.imagen}}">
-			 		<div><a>link {{item.name}}</a></div>
-			 	</div>	
+			 	{% for item in implementaciones %}
+				 	{% if item.service.id == 1 %}
+				 	<div class="item">
+				 		<img class="imagen_portafolio" src="{{MEDIA_URL}}{{item.logo}}" data-id="{{item.id}}">
+				 		<div><a>link </a></div>
+				 	</div>
+				 	{% endif %}	
+				{% endfor %}
 			</div>
-			{% endfor %}
 		</div>
 
 	<!-- panel -->
 		<div class="panel_portafolio ser_Paginasweb row-fluid" >
-			<div class="info_panle span12" style="background-color:red" > 
+			<div class="title_portafolio span12"  >
+				<h2> Diseño Grafico </h2>
+				<p> La imagen los es todo </p> 
 			</div>
 			<div class="items_panel " >
-			 	<div class="item">
-			 		<img src="">
-			 		<div><a>link</a></div>
-			 	</div>
-				<div class="item">
-			 		<div><a>link</a></div>			
-				</div>
-			 	<div class="item">
-			 		<img src="">
-			 		<div><a>link</a></div>
-			 	</div>
-				<div class="item">
-			 		<div><a>link</a></div>			
-				</div>
-			 	<div class="item">
-			 		<img src="">
-			 		<div><a>link</a></div>
-			 	</div>
-				<div class="item">
-			 		<div><a>link</a></div>			
-				</div>
-			 	<div class="item">
-			 		<img src="">
-			 		<div><a>link</a></div>
-			 	</div>
-				<div class="item">
-			 		<div><a>link</a></div>			
-				</div>
+				{% for item in implementaciones %}
+					{% if item.id == 2 %}
+				 	<div class="item">
+				 		<img src="">
+				 		<div><a>link</a></div>
+				 	</div>
+				 	{% endif %}
+				{% endfor %}
 			</div>
 		</div>
 
@@ -91,7 +85,16 @@
 	</div>
 
 </div>
-<div id="modalPortafolio">
+<div id="panelEscondido">
+<div id="div_temp"></div>
+
+
+{% for implementacion in implementaciones %}
+<div class="plantilla_implementacion" data-id="{{implementacion.id}}">
+	{{implemetacion.name}}	Hola Soy una Implementacion
+
+</div>
+{% endfor %}
 
 </div>
 
@@ -101,7 +104,20 @@
 
 {% block js %}
 <script type="text/javascript">
+	slider_activo=1
 $( document ).ready(function() {
+
+	function gestor_portafolio(self)
+	{ var id =$('.imagen_portafolio:hover').attr('data-id');
+		if (slider_activo == 1) {
+			slider_activo =0;
+			$('#sequence').hide();
+			};
+		var temp = $('.plantilla_implementacion[data-id='+id+']').html();
+		$('#renderplantilla').append(temp);
+		
+		
+		};
 
 	$('.link_portafolio').on('click',
 		function(e){
@@ -128,7 +144,8 @@ $( document ).ready(function() {
 			$('#tooltip'+service).css('display','none');		
 		});
 
-
+	$('.imagen_portafolio').on('click',gestor_portafolio);
+	$('.center_Interno_link_portafolio').on('click',function(){slider_activo =1;$('#sequence').show();})
 	$(".center_Interno_link_portafolio a:first-of-type img").click();
 });
 </script>

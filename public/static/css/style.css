@@ -234,4 +234,12 @@ text-align: center;
 .center_Interno_link_portafolio {height: 96px;}
 }
 
-.item:hover div { display: block;};
+.item:hover div { display: block;}
+#panel_sleder_servicios {
+background: black;
+margin-bottom: 60px;
+}
+.title_portafolio{ text-align: center;}
+.title_portafolio h2{ font-size: 25px }
+.text_siler_servicos{color: white}
+#panelEscondido{display: none}
