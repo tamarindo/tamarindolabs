@@ -87,14 +87,8 @@
 </div>
 <div id="panelEscondido">
 <div id="div_temp"></div>
-
-
-{% for implementacion in implementaciones %}
-<div class="plantilla_implementacion" data-id="{{implementacion.id}}">
-	{{implemetacion.name}}	Hola Soy una Implementacion
-
 </div>
-{% endfor %}
+
 
 </div>
 
@@ -113,11 +107,10 @@ $( document ).ready(function() {
 			slider_activo =0;
 			$('#sequence').hide();
 			};
-		var temp = $('.plantilla_implementacion[data-id='+id+']').html();
-		$('#renderplantilla').append(temp);
-		
-		
-		};
+		sendAjax({% url 'element_portafolio' %}, {'id' : id }, function(data) 
+			{renderizarEn(data,'renderplantilla');},{'met':'get'}
+			);	
+	};
 
 	$('.link_portafolio').on('click',
 		function(e){
@@ -145,7 +138,7 @@ $( document ).ready(function() {
 		});
 
 	$('.imagen_portafolio').on('click',gestor_portafolio);
-	$('.center_Interno_link_portafolio').on('click',function(){slider_activo =1;$('#sequence').show();})
+	$('.center_Interno_link_portafolio').on('click',function(){slider_activo =1;$('#sequence').show();$('#renderplantilla').hide();})
 	$(".center_Interno_link_portafolio a:first-of-type img").click();
 });
 </script>

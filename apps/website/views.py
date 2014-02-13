@@ -3,7 +3,6 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.template import RequestContext  # para hacer funcionar {% csrf_token %}
 from apps.admin_sas.models import *
 import pprint
-import random
 import urllib 
 from tamarindo_labs import settings as s
 
@@ -28,3 +27,7 @@ def contactenos(request):
     template = "contacto.html"
     return render_to_response(template, locals(), context_instance=RequestContext(request))
    
+def element_portafolio(request):
+
+	template="implementacion_portafolio.html"
+	return render_to_response(template, locals(), context_instance=RequestContext(request))
