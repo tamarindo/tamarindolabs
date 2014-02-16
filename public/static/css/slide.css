@@ -234,7 +234,7 @@ Aside from these comments, you may modify and distribute this file as you please
 	max-width: 1400px;
 }
 
-h2 {
+#slide h2 {
 	font-size: 1.5em;
 	line-height: 1.2em;
 }

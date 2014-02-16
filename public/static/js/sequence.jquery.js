@@ -872,7 +872,7 @@ Aside from these comments, you may modify and distribute this file as you please
 		defaultPreloader: function(prependTo, transitions, prefix){
 			var opacity = (transitions) ? 0 : 1;
 			$("head").append("<style>.sequence-preloader{height: 100%;position: absolute;width: 100%;z-index: 999999;}@"+prefix+"keyframes preload{0%{opacity: 0;}50%{opacity: 1;}100%{opacity: 0;}}.sequence-preloader img{background: #ff9933;border-radius: 6px;display: inline-block;height: 12px;opacity: "+opacity+";position: relative;top: -50%;width: 12px;"+prefix+"animation: preload 1s infinite; animation: preload 1s infinite;}.preloading{height: 12px;margin: 0 auto;top: 50%;position: relative;width: 48px;}.sequence-preloader img:nth-child(2){"+prefix+"animation-delay: .15s; animation-delay: .15s;}.sequence-preloader img:nth-child(3){"+prefix+"animation-delay: .3s; animation-delay: .3s;}.preloading-complete{opacity: 0;visibility: hidden;"+prefix+"transition-duration: 1s; transition-duration: 1s;}</style>");
-			$(prependTo).prepend('<div class="sequence-preloader"><div class="preloading"><img src="images/sequence-preloader.png" alt="Sequence is loading, please wait..." />    <img src="images/sequence-preloader.png" alt="Sequence is loading, please wait..." />    <img src="images/sequence-preloader.png" alt="Sequence is loading, please wait..." /></div></div>');
+			$(prependTo).prepend('<div class="sequence-preloader"><div class="preloading"><img src="../img/sequence-preloader.png" alt="Sequence is loading, please wait..." />    <img src="../img/sequence-preloader.png" alt="Sequence is loading, please wait..." />    <img src="../img/sequence-preloader.png" alt="Sequence is loading, please wait..." /></div></div>');
 		}
 	},
 	
@@ -892,25 +892,25 @@ Aside from these comments, you may modify and distribute this file as you please
 		//Next/Prev Button Settings
 		nextButton: false, //if dev settings are true, the nextButton will be ".next"
 		prependNextButton: false,
-		nextButtonSrc: "images/bt-next.png",
+		nextButtonSrc: "../img/bt-next.png",
 		nextButtonAlt: "&#gt;",
 		showNextButtonOnInit: true,
 		prevButton: false, //if dev settings are true, the prevButton will be ".prev"
 		prependPrevButton: false,
-		prevButtonSrc: "images/bt-prev.png",
+		prevButtonSrc: "../img/bt-prev.png",
 		prevButtonAlt: "&#lt;",
 		showPrevButtonOnInit: true,
 		
 		//Pause Settings
 		pauseButton: false, //if dev settings are true, the pauseButton will be ".pause"
 		prependPauseButton: false,
-		pauseButtonSrc: "images/bt-pause.png",
+		pauseButtonSrc: "../img/bt-pause.png",
 		pauseButtonAlt: "&#166;&#166;",
 		unpauseDelay: 0, //the time to wait before navigating to the next frame when Sequence is unpaused from the pause button
 		pauseOnHover: true,
 		pauseIcon: false, //this is an indicator to show Sequence is paused
 		prependPauseIcon: false,
-		pauseIconSrc: "images/pause-icon.png",
+		pauseIconSrc: "../img/pause-icon.png",
 		pauseAlt: "Pause",
 		pauseOnElementsOutsideContainer: false,
 		

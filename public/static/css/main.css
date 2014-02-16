@@ -1,0 +1,39 @@
+@import "base.css";
+@import "slide.css";
+.hide-text{text-indent:100%;white-space:nowrap;overflow:hidden}
+body{margin:0;font-family:'Source Sans Pro',sans-serif,Arial;font-size:18px;font-style:normal;font-weight:300;color:color;background:url("../img/body_bg.gif") 0 0 repeat-x #f8f8f8;}
+a{text-decoration:none;}
+a:hover{-webkit-transition:color 500ms ease;-moz-transition:color 500ms ease;-o-transition:color 500ms ease;-ms-transition:color 500ms ease;transition:color 500ms ease}
+h1{color:#121518;text-align:center;text-shadow:1px 1px 0 #fff;}
+h1 span{color:#009ee0}
+h1 strong{font-family:CabinBold,Helvetica,Arial,sans-serif;font-weight:bold}
+h1 .h1hidden{display:none}
+.island{background-color:#121518}
+/* responsive-nav.js 1.0.25 by @viljamis */
+.nav-collapse{background:#121518;height:40px;left:0;opacity:.9;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";filter:alpha(opacity=90);position:fixed;text-align:center;top:0;width:100%;z-index:1030;}
+.nav-collapse ul{width:auto;list-style:none;margin:0 auto;padding:0}
+.nav-collapse li{display:inline-block;padding:0 5px}
+.nav-collapse a{color:#999;}
+.nav-collapse a:hover{color:#fff}
+@media screen and (min-width: 520px){.nav-collapse li{padding:0 15px}
+}.slide_bright hr{background:url("../img/slide_brigth_bottom.png") 0 0 repeat-x;height:98px;width:100%;border:none;border-bottom:0;margin-top:0;margin-bottom:-70px}
+.info-box{border:1px solid;border_color:#bbb;background:#f8f8f8;width:98%;max-width:400px;margin:0 auto 10px;-webkit-border-radius:0 10px;border-radius:0 10px;-webkit-box-shadow:0 0 7px rgba(0,0,0,0.2);box-shadow:0 0 7px rgba(0,0,0,0.2);}
+.info-box .info-box-header{background:#f0f0f0;min-height:50px;border-bottom:solid 1px #bbb;-webkit-border-radius:1 10px;border-radius:1 10px;}
+.info-box .info-box-header h2{padding:7px 0 0 20px;color:#121518;text-shadow:1px 1px 0 #fff}
+.info-box .info-box-content{margin:20px;color:#2d2f32;}
+.info-box .info-box-content .btn{margin-top:10px;margin-left:10px}
+.whyus-header{text-align:center;}
+.whyus-header h3{color:#121518;text-shadow:1px 1px 0 #fff}
+.whyus{margin:30px 0;}
+.whyus h4{color:#121518}
+.whyus p{padding:10px 5px}
+hr{width:100%;border-top:1px solid #e2dede}
+footer{position:relative;margin-top:-30px;background:url("../img/footer-bright.jpg") center 0 no-repeat;height:265px;width:100%;}
+footer figure,footer img{margin:0;position:absolute}
+footer .footer-box{bottom:0;background:url("../img/footer-box.jpg") #121518 center 0 no-repeat;height:132px;width:100%}
+footer .footer-logo{left:50%;margin-left:-40px;width:81px;height:76px;bottom:25px}
+footer .paper{background:url("../img/footer-leaf.png") center 40px transparent no-repeat;width:406px;height:102px;margin-left:-203px;left:50%;bottom:119px;cursor:pointer;-webkit-transition:background-position 0.8s ease-out;-moz-transition:background-position 0.8s ease-out;-o-transition:background-position 0.8s ease-out;-ms-transition:background-position 0.8s ease-out;transition:background-position 0.8s ease-out}
+footer .paper:hover{background-position:center 0}
+footer .paper-shadow{height:58px;width:404px;bottom:0}
+footer .footer-contact{width:218px;height:58px;bottom:10px;margin-left:90px;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);-webkit-transition:opacity 0.6s cubic-bezier(0.47, 0, 0.55, 0.315);-moz-transition:opacity 0.6s cubic-bezier(0.47, 0, 0.55, 0.315);-o-transition:opacity 0.6s cubic-bezier(0.47, 0, 0.55, 0.315);-ms-transition:opacity 0.6s cubic-bezier(0.47, 0, 0.55, 0.315);transition:opacity 0.6s cubic-bezier(0.47, 0, 0.55, 0.315)}
+footer .footer-contact:hover{opacity:1;-ms-filter:none;filter:none}
