@@ -1,13 +1,19 @@
 @import "base.css";
-@import "slide.css";
+@import "animation.css";
+#sequence{height:400px;margin:40px auto 0;position:relative;width:100%;text-align:center;color:#fff;}
+#sequence > .canvas,#sequence > .canvas li{height:100%;width:100%;}
+#sequence > .canvas li,#sequence > .canvas li li{position:absolute;z-index:1;list-style:none}
+.slide-welcome{background:url("../img/huge-bg-2.jpg") center center;background-size:cover;height:100%;text-transform:uppercase;}
+.slide-welcome h2{font-size:16px;font-weight:normal;color:#0ff;-webkit-animation-duration:1.5s;-webkit-animation-delay:.4s}
+.slide-welcome h1{color:#fff;font-weight:100;padding-top:140px;font-size:52px}
 .hide-text{text-indent:100%;white-space:nowrap;overflow:hidden}
-body{margin:0;font-family:'Open Sans',sans-serif,Arial;font-size:18px;font-style:normal;font-weight:300;color:color;background:url("../img/body_bg.gif") 0 0 repeat-x #f8f8f8;}
+.big-font,.huge-font{font-weight:100}
+.big-font{font-size:45px}
+.huge-font{font-size:52px}
+body{margin:0;font-family:'Lato',sans-serif,Arial;font-size:18px;font-style:normal;font-weight:300;color:#484848;background:url("../img/body_bg.gif") 0 0 repeat-x #f8f8f8;}
 a{text-decoration:none;}
 a:hover{-webkit-transition:color 500ms ease;-moz-transition:color 500ms ease;-o-transition:color 500ms ease;-ms-transition:color 500ms ease;transition:color 500ms ease}
-h1{color:#121518;text-align:center;text-shadow:1px 1px 0 #fff;}
-h1 span{color:#009ee0}
-h1 strong{font-family:CabinBold,Helvetica,Arial,sans-serif;font-weight:bold}
-h1 .h1hidden{display:none}
+img{max-width:100%;height:auto;vertical-align:middle}
 .island{background-color:#121518}
 /* responsive-nav.js 1.0.25 by @viljamis */
 .main-navigation{background:#121518;font-size:14px;height:40px;left:0;position:fixed;text-align:center;top:0;width:100%;z-index:1030;}

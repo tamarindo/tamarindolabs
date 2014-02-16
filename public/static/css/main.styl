@@ -1,5 +1,6 @@
 @import "base.css"
-@import "slide.css"
+@import "animation.css"
+@import "slide"
 @import "nib/config"
 @import "nib/vendor"
 @import "nib/gradients"
@@ -21,6 +22,14 @@ separator		= #cfcfcf
   white-space nowrap
   overflow hidden
 
+.big-font
+.huge-font	
+	font-weight 100
+.big-font
+	font-size 45px
+.huge-font
+	font-size 52px
+
 /* ==========================================================================
    Main
    ==========================================================================
@@ -28,29 +37,23 @@ separator		= #cfcfcf
 
 body 
 	margin 0
-	font-family 'Open Sans', sans-serif, Arial
+	font-family 'Lato', sans-serif, Arial
 	font-size 18px
 	font-style normal
 	font-weight 300
-	color color
-	background url("../img/body_bg.gif") 0 0 repeat-x main_bg; /* Fallback IE < 9 */
+	color #484848
+	background url("../img/body_bg.gif") 0 0 repeat-x main_bg /* Fallback IE < 9 */
 
 a 
 	text-decoration none
 	&:hover
 		transition color 500ms ease
+/* Responsive Images */
+img 
+	max-width 100%
+	height auto
+	vertical-align middle
 
-h1 
-	color dark_gray
-	text-align center
-	text-shadow 1px 1px 0 rgba(255, 255, 255, 1)
-	span
-		color blue 
-	strong 
-		font-family CabinBold, Helvetica, Arial, sans-serif
-		font-weight bold	
-	.h1hidden 
-		display none 
 .island 
 	background-color dark_gray
 
