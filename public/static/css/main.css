@@ -10,12 +10,13 @@ h1 strong{font-family:CabinBold,Helvetica,Arial,sans-serif;font-weight:bold}
 h1 .h1hidden{display:none}
 .island{background-color:#121518}
 /* responsive-nav.js 1.0.25 by @viljamis */
-.nav-collapse{background:#121518;height:40px;left:0;opacity:.9;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";filter:alpha(opacity=90);position:fixed;text-align:center;top:0;width:100%;z-index:1030;}
-.nav-collapse ul{width:auto;list-style:none;margin:0 auto;padding:0}
-.nav-collapse li{display:inline-block;padding:0 5px}
-.nav-collapse a{color:#999;}
-.nav-collapse a:hover{color:#fff}
-@media screen and (min-width: 520px){.nav-collapse li{padding:0 15px}
+.main-navigation{background:#121518;font-size:14px;height:40px;left:0;position:fixed;text-align:center;top:0;width:100%;z-index:1030;}
+.main-navigation ul{width:auto;list-style:none;margin:0 auto;padding:0}
+.main-navigation li{display:inline-block;padding:0 5px}
+.main-navigation a{color:#999;}
+.main-navigation a:hover{color:#fff}
+@media screen and (min-width: 520px){.main-navigation{font-size:inherit;}
+.main-navigation li{padding:0 15px}
 }.slide_bright hr{background:url("../img/slide_brigth_bottom.png") 0 0 repeat-x;height:98px;width:100%;border:none;border-bottom:0;margin-top:0;margin-bottom:-70px}
 .info-box{border:1px solid;border_color:#bbb;background:#f8f8f8;width:98%;max-width:400px;margin:0 auto 10px;-webkit-border-radius:0 10px;border-radius:0 10px;-webkit-box-shadow:0 0 7px rgba(0,0,0,0.2);box-shadow:0 0 7px rgba(0,0,0,0.2);}
 .info-box .info-box-header{background:#f0f0f0;min-height:50px;border-bottom:solid 1px #bbb;-webkit-border-radius:1 10px;border-radius:1 10px;}
