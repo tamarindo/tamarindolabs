@@ -272,7 +272,7 @@ margin-top: 25px;
 color: red;
 }
 .botton_p{text-align: center;}
-.center_slider_portafolio{width: 260px; margin: 0 auto;}
+.center_slider_portafolio{width: 260px; margin: 20px auto;}
 .center_slider_portafolio img {
 height: 50px;
 margin: 7px 6px;
@@ -281,6 +281,15 @@ background: white;
 border-radius: 25px;
 }
 .principal_img {
-width: 65%;
+width: 65% !important;
 margin: 0 auto;
+}
+
+
+#slider img {
+width:900%;
+min-height:200px;
+margin:0;
+padding:0; 
+border:0;
 }

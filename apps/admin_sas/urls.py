@@ -1,9 +1,11 @@
 from django.conf.urls import patterns, url
+# Uncomment the next two lines to enable the admin:
+from django.contrib import admin
+admin.autodiscover()
 
-admin_sas_urls = patterns('apps.admin_sas.views',
-    url(r'^client/$', 'client', name="client"),
-    url(r'^administrator/$', 'administrator', name="administrator"),
-  
-)
+adminsas_urls = patterns('apps.admin_sas.views',
+    url(r'^/$','login'),
+    url(r'^/panel$', 'panel', name="panel"),  
+)  
 
 

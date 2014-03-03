@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{{ PROJECT_NAME }}, {{ PROJECT_DESCRIPTION }}">
+        <meta name="tamarindolabs" content="">
+        <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico">
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{{ STATIC_URL }}libs/boostrap3/css/bootstrap.css" rel="stylesheet">
+        <link href="{{ STATIC_URL }}css/style_sas.css" rel="stylesheet">
+        {% block style %}
+        {% endblock %}
+    </head>
+    <body>
+    <header>
+      <div class="container">
+        <div class="col-md-12">
+          <div class="left">
+            <div id="select_empresa">
+              <div id="empresa">
+                <a href="">
+                  <div class="item_empresa">
+                   <div class="l_logo">
+                     <img src="{{MEDIA_URL}}img/navlogo.gif" ></img>
+                   </div>
+                   <span class="l_title" >Tamarindo Lbas</span>
+                  </div>
+                </a>
+              </div>
+              <div id="empresas">
+                 <ul>
+                   <li>
+                    <a href=""><div class="item_empresa">
+                      <div class="l_logo">
+                     <img src="{{MEDIA_URL}}img/navlogo.gif" ></img>
+                   </div>
+                   <span class="l_title" >Tamarindo Lbas2</span>
+                    </div></a>
+                    <a href=""><div class="item_empresa">
+                      <div class="l_logo">
+                     <img src="{{MEDIA_URL}}img/navlogo.gif" ></img>
+                   </div>
+                   <span class="l_title" >Tamarindo Lbas3</span>
+                    </div></a>
+                    <a href=""><div class="item_empresa">
+                      <div class="l_logo">
+                     <img src="{{MEDIA_URL}}img/navlogo.gif" ></img>
+                   </div>
+                   <span class="l_title" >Tamarindo Lbas4</span>
+                    </div></a>
+                    <a href=""><div class="item_empresa">
+                      <div class="l_logo">
+                     <img src="{{MEDIA_URL}}img/navlogo.gif" ></img>
+                   </div>
+                   <span class="l_title" >Tamarindo Lba5s</span>
+                    </div></a>
+                   </li>
+                 </ul>
+              </div>
+
+            </div>
+          </div>
+          <div class="right">
+            <div id="myinfo">
+              <div class="glyphicon glyphicon-user"></div>
+              <span class="nombre"> Daniel Bernal</span>
+            </div>
+            <div id="notificaciones">
+              <span class="glyphicon glyphicon-flag"></span>
+            </div>
+            <div id="configuracion">
+              <span class="glyphicon glyphicon-wrench"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- NAVIGATION BAR -->
+            <div class="wrapper container" >
+                {% block content %}
+                {% endblock %}
+            </div>
+    <div id="load" ></div>
+    <!-- footer -->
+    <footer>
+         <div id="cneter_footer">
+           
+         </div>
+    </footer>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/sequence.jquery.js"></script>
+        <script type="text/javascript">
+            $( document ).ready(function() {
+              function menuGestor(self)
+              {  
+                    $('.menu_interno').hide();
+                    $(this).children('ul').show();
+              }
+              $(function(){
+                    $('#slider_app div:gt(0)').hide();
+                   /*setInterval(function(){
+                      $('#slider_app div:first-child').fadeOut(0).next('div').fadeIn(6000).end().appendTo('#slider_app');}, 6100);*/
+              
+                });
+             $('.menu_principal ul li').on('click',menuGestor); 
+            });
+          
+        </script>
+        {% block js %}
+
+        {% endblock %}
+     
+    </body>
+</html>

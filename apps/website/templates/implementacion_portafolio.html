@@ -1,13 +1,17 @@
 <div id="center_item_portafolio">
 	<div class="display_imagenes_portafolio">
-	<div class="principal_img">
-		<img src="{{STATIC_URL}}img/imagendemuestra.png">
+	<div class="principal_img" id="slider">
+
+		<div data-id="1"><img src="{{STATIC_URL}}img/imagendemuestra.png"></div>
+		<div data-id="2"><img  src="{{STATIC_URL}}img/imagendemuestra2.png"></div>
+		<div data-id="3"><img src="{{STATIC_URL}}img/imagendemuestra3.png"></div>
+
+	
 	</div>
 		<div class="center_slider_portafolio">
-			<img src="">
-			<img src="">
-			<img src="">
-			<img src="">			
+			<img data-id="1" src="{{STATIC_URL}}img/imagendemuestra.png">
+			<img data-id="2" src="{{STATIC_URL}}img/imagendemuestra.png">
+			<img data-id="3" src="{{STATIC_URL}}img/imagendemuestra.png">			
 		</div>
 	</div>
 	<div class="info_portafolio">
@@ -22,3 +26,21 @@
 
 	</div>
 </div>
+
+
+{% block js %}
+<script type="text/javascript">//<![CDATA[
+function clickslider(){
+var kl=$(this).attr('data-id');
+$('#slider div').hide();
+console.log( $('#slider div[data-id='+kl+']').html());
+ $('#slider div[data-id='+kl+']').appendTo('#slider').show();}
+
+$(function(){
+    $('#slider div:gt(0)').hide();
+   setInterval(function(){
+      $('#slider div:first-child').fadeOut(0).next('div').fadeIn(6000).end().appendTo('#slider');}, 6100);
+  $('.center_slider_portafolio img').on('click',clickslider);
+});
+//]]></script>
+{% endblock %}

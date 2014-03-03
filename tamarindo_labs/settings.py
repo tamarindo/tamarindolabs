@@ -24,6 +24,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+    'django.contrib.admin',
 )  + tuple(APPS)
 
 MIDDLEWARE_CLASSES = (
@@ -95,3 +96,12 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 )
+
+from django.core.urlresolvers import reverse_lazy
+
+
+LOGIN_URL = reverse_lazy('login')
+LOGOUT_URL = reverse_lazy('login')
+LORIN_REDIRECT_URL =reverse_lazy('login')
+
+

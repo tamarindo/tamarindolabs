@@ -1,0 +1,71 @@
+/* ------------------ .- heder -. ------------------------  */
+body > header {background: black;height: 50px;}
+.left{float: left;}
+.right{ float: right;}
+#select_empresa {width: 200px;height: 50px;}
+#empresa { ;width: 100%;height: 100%;position: relative;}
+#empresas {background: black; z-index: 10; display: none;position: absolute;width: 200px;height: auto;}
+#empresas ul { padding: 0px;}
+#empresas ul li{width: 200px;height: 50px;}
+#select_empresa:hover #empresas{display: block;}
+.item_empresa:hover{ background:red}
+header .right div{float: left;}
+#myinfo {width: 120px;color: #FFF;line-height: 50px;margin: 0px 10px;}
+#myinfo .glyphicon {padding: 14px 8px 0px 3px;}
+header .right div .glyphicon {font-size: 22px;color: white;padding: 14px;}
+.right .nombre{margin-bottom: 3px}
+#select_empresa .l_logo {width: 50px;height: 50px;padding: 5px;float: left;}
+#select_empresa .l_title {width: 100%;line-height: 50px;padding-left: 10px;color: white;}
+#select_empresa a{text-decoration: none !important;}
+.glyphicon{cursor: pointer;}
+/* ----------------------------------------------menu------------------------------  */
+.wrapper {
+margin: 0 auto;
+overflow: hidden;
+height: auto;
+}
+.menu_principal {
+background: gainsboro;
+border-radius: 11px;
+padding: 12px 5px;
+position: fixed;
+margin-top: 128px;
+}
+ul{padding: 0px;
+	margin: 0px;
+	list-style:none;}
+
+.menu_principal ul{}
+
+.menu_principal ul li {
+width: 165px;
+padding: 6px 10px;
+}
+.menu_principal ul li:hover{
+color: red;
+}
+
+.menu_interno{
+ display: none;
+}
+/*----------------------------------------------slider------------------------------------*/
+#slider_app {
+width: 100%;
+margin-top: 61px;
+border-radius: 8px;
+}
+#slider_app div {
+}
+#slider_app img {
+width: 100%;
+}
+
+
+/*---------------------------------------contenedor---------------------------------------------------*/
+#content_render {
+overflow: hidden;
+width: 100%;
+height: auto;
+padding: 15px 5px;
+margin-top: 51px;
+}

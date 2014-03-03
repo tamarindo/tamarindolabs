@@ -1,0 +1,52 @@
+{% extends "base_sas.html" %}
+{% load i18n %}
+{% block title %}{% trans 'Inicio' %}{% endblock %}
+{% block content %}
+<div id="app_cliente">
+	<div class="left col-xs-12 col-md-4">
+		<nav class="menu_principal">
+			<ul>
+				<li>
+					Productos
+					<ul class="menu_interno " >
+						<li> <a href="">Catalogo Productos</a> </li>
+						<li> <a href="">Mis Productos</a> </li>
+					</ul>
+				</li>
+				<li>
+					Pagos
+					<ul class="menu_interno" >
+						<li> <a href="">Pagos Pendientes</a> </li>
+						<li> <a href="">Historial Pagos</a> </li>
+					</ul>
+				</li>
+				<li>
+					Mensajes
+				</li>
+			</ul>
+		</nav>
+		<div id="chat">
+		</div>
+	</div>
+	<div class="right col-xs-12  col-md-8">
+		<div id="slider_app">
+			<div> <img src="{{MEDIA_URL}}img/pnlporque.png"> </div>
+			<div> <img src="{{MEDIA_URL}}img/pnlporque.png"> </div>
+			<div> <img src="{{MEDIA_URL}}img/pnlporque.png"> </div>
+			<div> <img src="{{MEDIA_URL}}img/pnlporque.png"> </div>
+			<div> <img src="{{MEDIA_URL}}img/pnlporque.png"> </div>
+		</div>
+		<div id="content_render"> </div>
+
+	</div>
+</div>
+
+{% endblock %}
+{% block style %}
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+  
+</script>
+{% endblock %}

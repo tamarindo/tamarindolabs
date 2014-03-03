@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{{ PROJECT_NAME }}, {{ PROJECT_DESCRIPTION }}">
+        <meta name="tamarindolabs" content="">
+        <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicon.ico">
+        <title>{% block title %}{% endblock %}</title>
+        <link href="{{ STATIC_URL }}css/boostrap3/bootstrap.css" rel="stylesheet">
+        <link href="{{ STATIC_URL }}css/boostrap3/bootstrap-responsive.css" rel="stylesheet">
+        <link href="{{ STATIC_URL }}css/slide.css" rel="stylesheet">
+        <link href="{{ STATIC_URL }}css/style_sas.css" rel="stylesheet">
+        <link href="{{ STATIC_URL }}css/jquery.bxslider.css" rel="stylesheet">
+        {% block style %}
+        {% endblock %}
+    </head>
+    <body>
+    <header>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="left">
+            <div id="select_empresa">
+              <div id="empresa">
+                <a href=""><div class="item_empresa"></div></a>
+              </div>
+              <div id="empresas">
+                 <ul>
+                   <li>
+                     <div class="item_empresa"></div>
+                   </li>
+                 </ul>
+              </div>
+
+            </div>
+          </div>
+          <div class="right">
+            <div id="myinfo">
+              <span class="glyphicon glyphicon-user"></span>
+              <span> Daniel Bernal</span>
+            </div>
+            <div id="notificaciones"></div>
+            <div id="configuracion"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- NAVIGATION BAR -->
+            <div class="wrapper" >
+              <div class="posicionadorbase">
+                {% block content %}
+                {% endblock %}
+              </div>
+            </div>
+    <div id="load" ></div>
+    <!-- footer -->
+    <footer>
+         <div id="cneter_footer">
+           
+         </div>
+    </footer>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/sequence.jquery.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-collapse.js"></script>
+    <script src="{{ STATIC_URL }}js/main.js"></script>
+    <script type="text/javascript"> 
+     $(document).ready(function(){
+       var options = {
+         autoPlay: false,
+         nextButton: ".next",
+         prevButton: ".prev"
+       };
+      var sequence = $("#sequence").sequence(options).data("sequence");
+     })
+   </script>
+        {% block js %}
+        {% endblock %}
+    </body>
+</html>
