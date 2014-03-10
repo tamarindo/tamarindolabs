@@ -1,10 +1,13 @@
-#sequence 
-    height 400px
-    margin 40px auto 0;
+@import "nib/vendor"
+
+#main-slide
     position relative /* required */
     width 100%
-    text-align center
-    color #fff
+    text-align center    
+
+    > .canvas
+    	padding 0
+    	margin 0
 
     > .canvas
     > .canvas li
@@ -16,6 +19,53 @@
     		z-index 1
     		list-style none
 
+#main-slide
+	height 400px
+	margin 40px auto 0;
+	color #fff
+
+
+#why-us
+    height auto
+    min-height 250px
+    margin 40px auto
+    position relative
+    width 50%
+    & > .sequence-canvas
+    	padding 0
+    	height 100%
+    	width 100%
+    	li > *
+            position absolute
+        & > li
+            position absolute
+            width 100%
+            height 100%
+            z-index 1
+            background-color #fff
+            list-style none
+    .fa
+    	font-size 2.7rem
+
+.prev
+.next 
+	position absolute !important
+	padding 0
+	top 50%
+	margin-top -1.35rem
+	color lighten(#000,70%)
+	z-index 9
+	cursor pointer
+
+	& :hover 
+		color lighten(#000,50%)
+
+.prev
+	left -2.5rem
+.next
+	right -2.5rem
+	
+
 
 /* Slide Welcome
 ========== */
@@ -26,14 +76,14 @@
 	height 100%
 	text-transform uppercase
 	h2 
-		font-size 16px
+		font-size 1rem
 		font-weight normal
 		color cyan
-		-webkit-animation-duration 1.5s
-		-webkit-animation-delay 0.4s
+		animation-duration 1.5s
+		animation-delay 0.4s
 		
 	h1
 		color #fff
 		font-weight 100
 		padding-top 140px
-		font-size 52px
+		font-size 3.5rem

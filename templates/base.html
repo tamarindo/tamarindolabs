@@ -12,6 +12,7 @@
 	{# Styles #}
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
 	<link href="{{ STATIC_URL }}css/main.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	{% block style %}
 	{% endblock %}
 </head>
@@ -66,7 +67,7 @@
 			prevButton: ".prev"
 		};
 
-		var sequence = $("#sequence").sequence().data("sequence");
+		// var sequence = $("#sequence").sequence().data("sequence");
 	})
 	</script>
 	{% block js %}

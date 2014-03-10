@@ -2,7 +2,6 @@
 @import "animation.css"
 @import "slide"
 @import "nib/config"
-@import "nib/vendor"
 @import "nib/gradients"
 
 /* ==========================================================================
@@ -38,11 +37,10 @@ separator		= #cfcfcf
 body 
 	margin 0
 	font-family 'Lato', sans-serif, Arial
-	font-size 18px
+	font-size 24px
 	font-style normal
 	font-weight 300
 	color #484848
-	background url("../img/body_bg.gif") 0 0 repeat-x main_bg /* Fallback IE < 9 */
 
 a 
 	text-decoration none
@@ -57,15 +55,9 @@ img
 .island 
 	background-color dark_gray
 
-/* ==========================================================================
-   Nav bar
-   ==========================================================================
-*/
-/*! responsive-nav.js 1.0.25 by @viljamis */
-
 .main-navigation
 	background dark_gray
-	font-size 14px
+	font-size 18px !important
 	height 40px
 	left 0
 	position fixed
@@ -167,8 +159,8 @@ hr
 
 footer 
 	position relative
-	margin-top -30px
-	background url("../img/footer-bright.jpg") center 0 no-repeat
+	padding-top 30px
+	background #f9f9f9 url("../img/footer-bright.jpg") center 0 no-repeat
 	height 265px
 	width 100%
 
