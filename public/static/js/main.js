@@ -1,23 +1,28 @@
-$('#panelDisenoDesarrollo .panelvisible .iconoabp'). on('mouseenter', function() {
-	$('#panelDisenoDesarrollo .panelinvisible ').show("slow");
-    });
+var $window   = $(window),
+    $document = $(document),
+    $html     = $(document.documentElement),
+    $body     = $(document.body),
+    $surface  = $body,
+    $content  = $('.content', $surface);
+    $navOffSet= 50;
+ 
 
-$('#panelDisenoDesarrollo .panelinvisible .bnt_retractil'). on('click', function() {
-	$('#panelDisenoDesarrollo .panelinvisible ').hide("slow");
+// Smooth scrolling for same page anchors
+    // =================
+    $document.on('click', 'a[href^=#]:not([href=#])', function(e) {
+      e.preventDefault();
+ 
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $surface.animate({
+          scrollTop: target.offset().top - $navOffSet
+        }, 500);
+        location.hash = this.hash;
+        return false;
+      }
     });
-
-$('#panelAdminwebsite .panelvisible .iconoabp'). on('mouseenter', function() {
-	$('#panelAdminwebsite .panelinvisible ').show("slow");
-    });
-
-$('#panelAdminwebsite .panelinvisible .bnt_retractil'). on('click', function() {
-	$('#panelAdminwebsite .panelinvisible ').hide("slow");
-    });
-
-$('#panelAppmoviles .panelvisible .iconoabp'). on('mouseenter', function() {
-	$('#panelAppmoviles .panelinvisible ').show("slow");
-    });
-
-$('#panelAppmoviles .panelinvisible .bnt_retractil'). on('click', function() {
-	$('#panelAppmoviles .panelinvisible ').hide("slow");
-    });
+ 
+    // Fix oveflow-scrolling on iOS7
+    // =================
+    $surface.on('touchstart', function(e) {});
