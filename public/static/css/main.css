@@ -1,10 +1,5 @@
 @import "base.css";
 @import "animation.css";
-#main-slide{position:relative;width:100%;text-align:center;}
-#main-slide > .canvas{padding:0;margin:0}
-#main-slide > .canvas,#main-slide > .canvas li{height:100%;width:100%;}
-#main-slide > .canvas li,#main-slide > .canvas li li{position:absolute;z-index:1;list-style:none}
-#main-slide{height:400px;margin:40px auto 0;color:#fff}
 #why-us{height:auto;min-height:250px;margin:40px auto;position:relative;width:50%;}
 #why-us > .sequence-canvas{padding:0;height:100%;width:100%;}
 #why-us > .sequence-canvas li > *{position:absolute}
@@ -14,9 +9,6 @@
 .prev :hover,.next :hover{color:#808080}
 .prev{left:-2.5rem}
 .next{right:-2.5rem}
-.slide-welcome{background:url("../img/huge-bg-2.jpg") center center;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;height:100%;text-transform:uppercase;}
-.slide-welcome h2{font-size:1rem;font-weight:normal;color:#0ff;-webkit-animation-duration:1.5s;-moz-animation-duration:1.5s;-o-animation-duration:1.5s;-ms-animation-duration:1.5s;animation-duration:1.5s;-webkit-animation-delay:.4s;-moz-animation-delay:.4s;-o-animation-delay:.4s;-ms-animation-delay:.4s;animation-delay:.4s}
-.slide-welcome h1{color:#fff;font-weight:100;padding-top:140px;font-size:3.5rem}
 .hide-text{text-indent:100%;white-space:nowrap;overflow:hidden}
 .big-font,.huge-font{font-weight:100}
 .big-font{font-size:45px}
@@ -54,3 +46,6 @@ footer .paper:hover{background-position:center 0}
 footer .paper-shadow{height:58px;width:404px;bottom:0}
 footer .footer-contact{width:218px;height:58px;bottom:10px;margin-left:90px;opacity:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);-webkit-transition:opacity 0.6s cubic-bezier(0.47, 0, 0.55, 0.315);-moz-transition:opacity 0.6s cubic-bezier(0.47, 0, 0.55, 0.315);-o-transition:opacity 0.6s cubic-bezier(0.47, 0, 0.55, 0.315);-ms-transition:opacity 0.6s cubic-bezier(0.47, 0, 0.55, 0.315);transition:opacity 0.6s cubic-bezier(0.47, 0, 0.55, 0.315)}
 footer .footer-contact:hover{opacity:1;-ms-filter:none;filter:none}
+#hero{background:url("../img/huge-bg-2.jpg") center center;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;width:100%;height:400px;text-transform:uppercase;text-align:center;}
+#hero h2{font-size:1rem;font-weight:normal;color:#0ff;-webkit-animation-duration:1.5s;-moz-animation-duration:1.5s;-o-animation-duration:1.5s;-ms-animation-duration:1.5s;animation-duration:1.5s;-webkit-animation-delay:.4s;-moz-animation-delay:.4s;-o-animation-delay:.4s;-ms-animation-delay:.4s;animation-delay:.4s}
+#hero h1{color:#fff;font-weight:100;padding-top:140px;font-size:3.5rem}
