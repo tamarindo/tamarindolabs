@@ -4,8 +4,9 @@ from django.contrib import admin
 admin.autodiscover()
 
 adminsas_urls = patterns('apps.admin_sas.views',
-    url(r'^/$','login'),
-    url(r'^/panel$', 'panel', name="panel"),  
+    url(r'^/$','principal', name="principal"),
+    url(r'^/login$', 'login', name="login"),
+    url(r'^/logout$', 'v_logout', name="v_logout"),    
 )  
 
 

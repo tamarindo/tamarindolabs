@@ -1,5 +1,6 @@
 /* ------------------ .- heder -. ------------------------  */
 body > header {background: black;height: 50px;}
+
 .left{float: left;}
 .right{ float: right;}
 #select_empresa {width: 200px;height: 50px;}
@@ -10,7 +11,7 @@ body > header {background: black;height: 50px;}
 #select_empresa:hover #empresas{display: block;}
 .item_empresa:hover{ background:red}
 header .right div{float: left;}
-#myinfo {width: 120px;color: #FFF;line-height: 50px;margin: 0px 10px;}
+#myinfo {cursor: pointer; width: 120px;color: #FFF;line-height: 50px;margin: 0px 10px;}
 #myinfo .glyphicon {padding: 14px 8px 0px 3px;}
 header .right div .glyphicon {font-size: 22px;color: white;padding: 14px;}
 .right .nombre{margin-bottom: 3px}
@@ -24,13 +25,30 @@ margin: 0 auto;
 overflow: hidden;
 height: auto;
 }
+
+@media (max-width: 992px) {
+.menu_principal {
+background: gainsboro;
+border-radius: 11px;
+padding: 12px 5px;
+position: relative;
+}
+}
+@media (min-width: 992px)  {
 .menu_principal {
 background: gainsboro;
 border-radius: 11px;
 padding: 12px 5px;
 position: fixed;
 margin-top: 128px;
+} 
 }
+
+
+
+
+
+
 ul{padding: 0px;
 	margin: 0px;
 	list-style:none;}

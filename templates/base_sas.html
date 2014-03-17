@@ -13,8 +13,9 @@
         {% endblock %}
     </head>
     <body>
+
     <header>
-      <div class="container">
+      <div class="container ">
         <div class="col-md-12">
           <div class="left">
             <div id="select_empresa">
@@ -72,12 +73,15 @@
             <div id="configuracion">
               <span class="glyphicon glyphicon-wrench"></span>
             </div>
+             <a  href="{% url 'v_logout' %}"><div id="off">
+              <span class="glyphicon glyphicon-off"></span>
+            </div></a>
           </div>
         </div>
       </div>
     </header>
     <!-- NAVIGATION BAR -->
-            <div class="wrapper container" >
+            <div class="wrapper container col-md-12" >
                 {% block content %}
                 {% endblock %}
             </div>
@@ -88,14 +92,22 @@
            
          </div>
     </footer>
+
     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/sequence.jquery.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/main.js"></script>
         <script type="text/javascript">
             $( document ).ready(function() {
               function menuGestor(self)
               {  
                     $('.menu_interno').hide();
                     $(this).children('ul').show();
+              }
+              function salir(self)
+              { 
+                    sendAjax('logout',"","",{'met':'post'});
+
+
               }
               $(function(){
                     $('#slider_app div:gt(0)').hide();
@@ -104,6 +116,7 @@
               
                 });
              $('.menu_principal ul li').on('click',menuGestor); 
+             /*$('#off').on('click',salir);*/
             });
           
         </script>
